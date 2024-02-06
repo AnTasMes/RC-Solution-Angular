@@ -1,0 +1,10 @@
+<table class="table table-bordered">
+    <tr>
+        <th>Employee Name</th>
+        <th>Time in hours</th>
+    </tr>
+    <tr *ngFor="let employee of groupedEmployees" [ngClass]="{'bg-danger text-white': employee.TotalHours < 100}">
+        <td>{{employee.EmployeeName}}</td>
+        <td>{{employee.TotalHours | number: '1.0-0'}}</td>
+    </tr>
+</table>
